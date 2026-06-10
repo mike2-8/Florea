@@ -1,0 +1,14 @@
+:root {
+    /* COLORS */
+    --primary-color:  #456548;
+    --primary-light:  #ADC3B2;
+    --secondary-color: #E6BBAB;
+    --white: #FFFFFF;
+ 
+    /* TYPOGRAPHY */
+    --font-main: 'Montserrat', sans-serif;
+ 
+    --font-size-base: 18px;
+    --h1-size: 56px;
+    --h2-size: 42px;
+}
