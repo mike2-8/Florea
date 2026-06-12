@@ -24,6 +24,9 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--Fancybox-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
@@ -122,11 +125,7 @@
 
                 </div>
             </div>
-            <!-- <div class="hero-wave">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
-                    <path fill="#ffffff" d="M0,64 C360,0 1080,0 1440,64 L1440,80 L0,80 Z" />
-                </svg>
-            </div>-->
+
             <div class="elementor-shape" aria-hidden="true" data-negative="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
                     <path class="elementor-shape-fill" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
@@ -138,100 +137,850 @@
 
 
         <!-- ABOUT SECTION -->
-        <section id="about" class="about">
+        <section id="about" class="section-about">
             <div class="container">
-                <div id="about-wrapper" class="about-wrapper">
-                    <!-- CỘT TRÁI -->
-                    <div id="about-col-left" class="about-col-left">
-                        <div id="about-img" class="about-img">
-                            <img src="images/img.png" alt="Spa treatment">
-                        </div>
-                        <div id="about-leaf" class="about-leaf">
-                            <img src="images/leaves.png" alt="">
-                        </div>
-                        <div id="about-badge" class="about-badge">
-                            <img src="images/badge.png" alt="Premium Quality">
-                        </div>
-                    </div>
 
-                    <!-- CỘT PHẢI -->
-                    <div id="about-col-right" class="about-col-right">
-                        <div id="about-tag" class="about-tag">Our Team</div>
-                        <div id="about-heading" class="about-heading">
-                            <h2>Excellence and passion in every beauty detail</h2>
-                        </div>
-                        <div id="about-stats" class="about-stats">
-                            <span class="stats-number">25+</span>
-                            <div class="stats-text">
-                                <p class="stats-title">Years of Experience</p>
-                                <p class="stats-desc">Luctus dis id nisi parturient letius quam nisl tristique et</p>
+                <div class="row g-5 row-cols-1 row-cols-lg-2">
+                    <div class="col">
+                        <div id="about-col-left" class="about-col-left position-relative">
+                            <div id="about-img" class="about-img">
+                                <img src="images/img.png" alt="Spa treatment">
+                            </div>
+                            <div id="about-leaf" class="about-leaf position-absolute">
+                                <img src="images/leaves.png" alt="">
+                            </div>
+                            <div id="about-badge" class="about-badge position-absolute">
+                                <img src="images/badge.png" alt="Premium Quality">
                             </div>
                         </div>
-                        <div id="about-desc" class="about-desc">
-                            <p>Magna pretium vehicula etiam semper curae elit facilisis habitasse molestie. Eros nunc
-                                aliquet blandit consequat fringilla ligula. Netus luctus diam orci ut tempor ultrices
-                                eros sodales nisi.</p>
-                        </div>
-                        <div id="about-buttons" class="about-buttons">
-                            <a href="#" class="btn btn-outline-about">Discover More</a>
-                            <div class="btn-play-wrap">
-                                <button class="btn-play" aria-label="Play intro">
-                                    <i class="fa-solid fa-play"></i>
-                                </button>
-                                <span class="play-label">Play Intro</span>
+                    </div>
+                    <div class="col">
+                        <div id="about-col-right" class="about-col-right">
+                            <div id="about-heading" class="about-heading">
+                                <span class="about-tag">Our Team</span>
+                                <h2>Excellence and passion in every beauty detail</h2>
+                            </div>
+                            <div id="about-stats" class="about-stats">
+                                <span class="stats-number">25+</span>
+                                <div class="stats-text">
+                                    <p class="stats-title">Years of Experience</p>
+                                    <p class="stats-desc">Luctus dis id nisi parturient letius quam nisl tristique et
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="about-desc" class="about-desc">
+                                <p>Magna pretium vehicula etiam semper curae elit facilisis habitasse molestie. Eros
+                                    nunc
+                                    aliquet blandit consequat fringilla ligula. Netus luctus diam orci ut tempor
+                                    ultrices
+                                    eros sodales nisi.</p>
+                            </div>
+                            <div id="about-buttons" class="about-buttons">
+                                <a href="#" class="btn btn-outline-about">Discover More</a>
+                                <a href="https://www.youtube.com/watch?v=VhBl3dHT5SY&t=4s" data-fancybox
+                                    class="btn-play-wrap">
+                                    <button class="btn-play" aria-label="Play intro">
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                    <span class="play-label">Play Intro</span>
+                                </a>
                             </div>
                         </div>
 
                     </div>
                 </div>
+            </div>
+            </div>
         </section>
+
 
         <!-- FEATURES -->
         <section id="features" class="features">
             <div class="container">
+
                 <div id="features-wrapper" class="features-wrapper">
+                    <div class="row row-cols-1 row-cols-md-3 g-3 mt-5">
+                        <div class="col">
+                            <div id="feature-item-1" class="feature-item">
+                                <div id="feature-icon-1" class="feature-icon">
+                                    <img src="images/beauty-care-icon-1.png" alt="">
+                                </div>
 
-                    <!-- FEATURE ITEM 1 -->
-                    <div id="feature-item-1" class="feature-item">
-                        <div id="feature-icon-1" class="feature-icon">
-                            <img src="images/beauty-care-icon-1.png" alt="">
+                                <div id="feature-text-1" class="feature-text">
+                                    <div id="feature-title-1" class="feature-title">Proven Excellence</div>
+                                    <div id="feature-desc-1" class="feature-desc">Massa adipiscing velit vivamus at
+                                        commodo
+                                        urna
+                                        erat auctor quisque</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="feature-text-1" class="feature-text">
-                            <div id="feature-title-1" class="feature-title">Proven Excellence</div>
-                            <div id="feature-desc-1" class="feature-desc">Massa adipiscing velit vivamus at commodo urna
-                                erat auctor quisque</div>
+                        <div class="col">
+                            <div id="feature-item-2" class="feature-item">
+                                <div id="feature-icon-2" class="feature-icon">
+                                    <img src="images/beauty-care-icon-2.png" alt="">
+                                </div>
+
+                                <div id="feature-text-2" class="feature-text">
+                                    <div id="feature-title-2" class="feature-title">Signature Quality</div>
+                                    <div id="feature-desc-2" class="feature-desc">Massa adipiscing velit vivamus at
+                                        commodo
+                                        urna
+                                        erat auctor quisque</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div id="feature-item-3" class="feature-item">
+                                <div id="feature-icon-3" class="feature-icon">
+                                    <img src="images/beauty-care-icon-3.png" alt="">
+                                </div>
+
+                                <div id="feature-text-3" class="feature-text">
+                                    <div id="feature-title-3" class="feature-title">100% Quality</div>
+                                    <div id="feature-desc-3" class="feature-desc">Massa adipiscing velit vivamus at
+                                        commodo
+                                        urna
+                                        erat auctor quisque 11</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BRANDS SECTION -->
+        <section id="brands" class="section-brands">
+            <div class="container">
+
+                <div class="brands-heading">
+                    <p class="fs-3">Trusted by <span class="brands-number">25,000+</span> world-class brands and
+                        organizations of all sizes</p>
+                </div>
+
+                <div class="row row-cols-2 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="brand-item ">
+                            <img src="images/brand-1.png" alt="Botanix">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-2.png" alt="Grovia">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-3.png" alt="Noursh">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-4.png" alt="Neurova">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-5.png" alt="Omnix">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-6.png" alt="PeakLand">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-7.png" alt="Nuvanta">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="brand-item">
+                            <img src="images/brand-8.png" alt="Brightbox">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VALUES SECTION -->
+        <section id="values" class="section-values" style="background-image: url('images/value-bg.png');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+
+                        <div class="values-card">
+
+                            <!-- DIV 1: Tag + Heading -->
+                            <div class="values-heading">
+                                <span class="values-tag">Our Value</span>
+                                <h2>Values that define our approach to care</h2>
+                            </div>
+
+                            <!-- DIV 2: Mô tả -->
+                            <div class="values-desc">
+                                <p>Nam commodo curae letius convallis vel. Habitasse nisi hac duis etiam consectetuer
+                                    ridiculus lectus potenti.</p>
+                            </div>
+
+                            <!-- DIV 3: Item 1 -->
+                            <div class="values-item">
+                                <div class="values-item-box-wrapper">
+                                    <div class="values-item-box-icon">
+                                        <span class="values-icon">
+                                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                        </span>
+                                    </div>
+                                    <div class="values-item-box-content">
+                                        <div class="values-item-box-title">Client First</div>
+                                        <p class="values-item-box-desc">Etiam posuere feugiat ridiculus euismod cursus
+                                            maximus augue ante placerat rhoncus sed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DIV 4: Item 2 -->
+                            <div class="values-item">
+                                <div class="values-item-box-wrapper">
+                                    <div class="values-item-box-icon">
+                                        <span class="values-icon">
+                                            <i class="fa-solid fa-earth-americas"></i>
+                                        </span>
+                                    </div>
+                                    <div class="values-item-box-content">
+                                        <div class="values-item-box-title">Pure Integrity</div>
+                                        <p class="values-item-box-desc">Etiam posuere feugiat ridiculus euismod cursus
+                                            maximus augue ante placerat rhoncus sed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DIV 5: Item 3 -->
+                            <div class="values-item">
+                                <div class="values-item-box-wrapper">
+                                    <div class="values-item-box-icon">
+                                        <span class="values-icon">
+                                            <i class="fa-solid fa-users"></i>
+                                        </span>
+                                    </div>
+                                    <div class="values-item-box-content">
+                                        <div class="values-item-box-title">Expert Care</div>
+                                        <p class="values-item-box-desc">Etiam posuere feugiat ridiculus euismod cursus
+                                            maximus augue ante placerat rhoncus sed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DIV 6: Item 4 -->
+                            <div class="values-item">
+                                <div class="values-item-box-wrapper">
+                                    <div class="values-item-box-icon">
+                                        <span class="values-icon">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </span>
+                                    </div>
+                                    <div class="values-item-box-content">
+                                        <div class="values-item-box-title">Continuous Growth</div>
+                                        <p class="values-item-box-desc">Etiam posuere feugiat ridiculus euismod cursus
+                                            maximus augue ante placerat rhoncus sed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /values-card -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-shape" aria-hidden="true" data-negative="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+	c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+	c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section-services">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- CỘT TRÁI -->
+                    <div class="col-12 col-lg-6">
+                        <div class="services-content">
+
+                            <div class="services-heading">
+                                <span class="services-tag">Our Services</span>
+                                <h2>Professional care tailored for your beauty journey</h2>
+                            </div>
+
+                            <div class="services-desc">
+                                <p>Id ut ullamcorper commodo neque est blandit senectus odio. Tempus malesuada
+                                    parturient cubilia sociosqu adipiscing viverra hac. Nec blandit erat quisque
+                                    facilisis fringilla nostra auctor fames ut maximus.</p>
+                            </div>
+
+                            <ul class="services-list">
+                                <li class="services-list-item"><span>Proven Results</span></li>
+                                <li class="services-list-item"><span>High Standards</span></li>
+                                <li class="services-list-item"><span>Safe Treatment</span></li>
+                                <li class="services-list-item"><span>Trusted Service</span></li>
+                                <li class="services-list-item"><span>Friendly Support</span></li>
+                                <li class="services-list-item"><span>Client Focused</span></li>
+                                <li class="services-list-item"><span>Seamless Process</span></li>
+                                <li class="services-list-item"><span>Seamless Process</span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- CỘT PHẢI -->
+                    <div class="col-12 col-lg-6">
+                        <div class="services-img">
+                            <img src="images/services-img.png" alt="services">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TREATMENTS SECTION -->
+        <section id="treatments" class="section-treatments">
+
+            <div class="elementor-shape elementor-shape-top" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill-light" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+                </svg>
+            </div>
+
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="treatments-heading">
+                    <span class="treatments-tag">What We Offer</span>
+                    <h2>Advanced treatments for refined beauty results and care</h2>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-1.png" alt="Deep Cleansing Facial">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Deep Cleansing Facial</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$25 / treatment</span>
+                                    <span class="treatment-duration">45 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-2.png" alt="Hydrating Facial Treatment">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Hydrating Facial Treatment</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$35 / treatment</span>
+                                    <span class="treatment-duration">50 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-3.png" alt="Brightening Facial Care">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Brightening Facial Care</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$40 / treatment</span>
+                                    <span class="treatment-duration">50 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-4.png" alt="Acne Treatment Facial">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Acne Treatment Facial</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$45 / treatment</span>
+                                    <span class="treatment-duration">60 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-5.png" alt="Anti Aging Treatment">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Anti Aging Treatment</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$60 / treatment</span>
+                                    <span class="treatment-duration">60 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="treatment-card">
+                            <div class="treatment-card-img">
+                                <img src="images/treatment-6.png" alt="Skin Analysis Consultation">
+                                <div class="treatment-card-icon">
+                                    <img src="images/treatment-icon-6.png" alt="">
+                                </div>
+                            </div>
+                            <div class="treatment-card-body">
+                                <div class="treatment-card-title">Skin Analysis Consultation</div>
+                                <div class="treatment-card-desc">Netus dui ante eu leo cursus tincidunt blandit cubilia
+                                    habitant potenti placerat</div>
+                                <hr class="treatment-card-divider">
+                                <div class="treatment-card-meta">
+                                    <span class="treatment-price">$15 / treatment</span>
+                                    <span class="treatment-duration">30 minutes</span>
+                                </div>
+                                <span class="btn treatment-btn">Booking Now!</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- /row -->
+
+            </div>
+        </section>
+
+        <!----- PROMO SECTION ----->
+        <section id="promo" class="section-promo position-relative"
+            style="background-image: url('images/promo-bg.png');">
+            <div class="container">
+                <div class="promo-card">
+                    <h2>Get 50% Off Your First Treatment Today</h2>
+                    <p>Enjoy a special welcome offer and experience premium skincare at half the price.</p>
+                    <a href="#" class="btn btn-promo">Claim Offer →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section id="why-us" class="section-why-us">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- CỘT TRÁI -->
+                    <div class="col-12 col-lg-5">
+                        <div class="why-us-content">
+                            <div class="why-us-heading">
+                                <span class="why-us-tag">Why Choose Us</span>
+                                <h2>The reason behind our trusted beauty care</h2>
+                            </div>
+                            <div class="why-us-desc">
+                                <p>Mus faucibus facilisis nec neque primis placerat hendrerit venenatis velit. Dui
+                                    molestie primis quam ultricies vel eu.</p>
+                            </div>
+                            <div class="why-us-img">
+                                <img src="images/why-us-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CỘT PHẢI -->
+                    <div class="col-12 col-lg-7">
+                        <div class="row row-cols-2 g-3 why-us-grid">
+
+                            <div class="col">
+                                <div class="why-us-card">
+                                    <div class="why-us-card-icon">
+                                        <i class="fa-solid fa-leaf"></i>
+                                    </div>
+                                    <h6 class="why-us-card-title">Personalized Care</h6>
+                                    <p class="why-us-card-desc">Proin primis quisque habitasse senectus nisi suspendisse
+                                        hendrerit habitant</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="why-us-card">
+                                    <div class="why-us-card-icon">
+                                        <i class="fa-regular fa-gem"></i>
+                                    </div>
+                                    <h6 class="why-us-card-title">Comfort Experience</h6>
+                                    <p class="why-us-card-desc">Proin primis quisque habitasse senectus nisi suspendisse
+                                        hendrerit habitant</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="why-us-card">
+                                    <div class="why-us-card-icon">
+                                        <i class="fa-solid fa-snowflake"></i>
+                                    </div>
+                                    <h6 class="why-us-card-title">Advanced Methods</h6>
+                                    <p class="why-us-card-desc">Proin primis quisque habitasse senectus nisi suspendisse
+                                        hendrerit habitant</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="why-us-card">
+                                    <div class="why-us-card-icon">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <h6 class="why-us-card-title">Trusted Service</h6>
+                                    <p class="why-us-card-desc">Proin primis quisque habitasse senectus nisi suspendisse
+                                        hendrerit habitant</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="elementor-shape" aria-hidden="true" data-negative="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!------ BOOKING STEPS ------>
+        <section id="booking-steps" class="section-booking-steps">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- CỘT TRÁI -->
+                    <div class="col-12 col-lg-6">
+
+                        <div class="steps-content">
+                            <div class="steps-heading">
+                                <span class="steps-tag">Step to Booking</span>
+                                <h2>Simple steps to book your beauty treatment</h2>
+                            </div>
+                            <div class="steps-desc">
+                                <p>Mattis praesent donec risus faucibus placerat morbi molestie quisque neque class
+                                    fringilla. Sagittis consectetur ultrices ridiculus facilisi feugiat inceptos.</p>
+                            </div>
+                        </div>
+
+                        <div class="steps-img">
+                            <img src="images/booking-steps-img.png" alt="">
                         </div>
 
                     </div>
 
-                    <!-- FEATURE ITEM 2 -->
-                    <div id="feature-item-2" class="feature-item">
-                        <div id="feature-icon-2" class="feature-icon">
-                            <img src="images/beauty-care-icon-2.png" alt="">
+                    <!-- CỘT PHẢI -->
+                    <div class="col-12 col-lg-6 position-relative">
+
+                        <div class="steps-leaf">
+                            <img src="images/leaves.png" alt="">
                         </div>
 
-                        <div id="feature-text-2" class="feature-text">
-                            <div id="feature-title-2" class="feature-title">Signature Quality</div>
-                            <div id="feature-desc-2" class="feature-desc">Massa adipiscing velit vivamus at commodo urna
-                                erat auctor quisque</div>
+                        <div class="steps-list">
+
+                            <!-- STEP 1 -->
+                            <div class="steps-item">
+                                <div class="steps-item-box-wrapper">
+                                    <div class="steps-item-box-icon">
+                                        <span class="steps-icon">
+                                            <i class="fa-regular fa-file-lines"></i>
+                                        </span>
+                                    </div>
+                                    <div class="steps-item-box-content">
+                                        <div class="steps-item-box-title">Choose Service</div>
+                                        <p class="steps-item-box-desc">Ornare ex pellentesque montes eu turpis nunc
+                                            vivamus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STEP 2 -->
+                            <div class="steps-item">
+                                <div class="steps-item-box-wrapper">
+                                    <div class="steps-item-box-icon">
+                                        <span class="steps-icon">
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                    <div class="steps-item-box-content">
+                                        <div class="steps-item-box-title">Select Schedule</div>
+                                        <p class="steps-item-box-desc">Ornare ex pellentesque montes eu turpis nunc
+                                            vivamus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STEP 3 -->
+                            <div class="steps-item">
+                                <div class="steps-item-box-wrapper">
+                                    <div class="steps-item-box-icon">
+                                        <span class="steps-icon">
+                                            <i class="fa-regular fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                    <div class="steps-item-box-content">
+                                        <div class="steps-item-box-title">Fill Your Details</div>
+                                        <p class="steps-item-box-desc">Ornare ex pellentesque montes eu turpis nunc
+                                            vivamus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STEP 4 -->
+                            <div class="steps-item">
+                                <div class="steps-item-box-wrapper">
+                                    <div class="steps-item-box-icon">
+                                        <span class="steps-icon">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </span>
+                                    </div>
+                                    <div class="steps-item-box-content">
+                                        <div class="steps-item-box-title">Confirm Booking</div>
+                                        <p class="steps-item-box-desc">Ornare ex pellentesque montes eu turpis nunc
+                                            vivamus</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
 
-                    <!-- FEATURE ITEM 3 -->
-                    <div id="feature-item-3" class="feature-item">
-                        <div id="feature-icon-3" class="feature-icon">
-                            <img src="images/beauty-care-icon-3.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING DECORATIVE -->
+        <section class="section-booking-decorative">
+            <div class="container">
+                <div class="booking-decorative">Booking Now!</div>
+            </div>
+        </section>
+
+        <!-- BOOKING FORM -->
+        <section id="booking" class="section-booking">
+
+            <div class="container">
+                <div class="row g-5 mb-5">
+
+                    <div class="col-12 col-lg-6">
+                        <div class="booking-heading">
+                            <span class="booking-tag">Book an Appointmet</span>
+                            <h2>Book your beauty treatment with ease and comfort today</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="booking-intro">
+                            <p>Sociosqu penatibus senectus lacinia blandit dictum consectetuer risus bibendum maximus
+                                dapibus. Tortor class fames rutrum ac vestibulum congue. Massa convallis montes in sed
+                                curae maximus ac nunc ipsum lacus.</p>
+                            <div class="booking-intro-buttons">
+                                <a href="#" class="btn btn-booking-primary">Free Consultations</a>
+                                <a href="#" class="btn btn-booking-outline">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="booking-form">
+
+                    <!-- Hàng 1 -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-lg-4">
+                            <label for="fullName" class="booking-label form-label">Full Name</label>
+                            <input type="text" class="form-control booking-input" id="fullName" placeholder="Full Name">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <label for="emailAddress" class="booking-label form-label">Email Address</label>
+                            <input type="email" class="form-control booking-input" id="emailAddress"
+                                placeholder="Email Address">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <label for="phoneNumber" class="booking-label form-label">Phone Number</label>
+                            <input type="tel" class="form-control booking-input" id="phoneNumber"
+                                placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <!-- Hàng 2 -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-lg-4">
+                            <label for="selectService" class="booking-label form-label">Select Service</label>
+                            <select class="form-select booking-input" id="selectService">
+                                <option>Deep Cleansing Facial</option>
+                                <option>Hydrating Facial Treatment</option>
+                                <option>Brightening Facial Care</option>
+                                <option>Acne Treatment Facial</option>
+                                <option>Anti Aging Treatment</option>
+                                <option>Skin Analysis Consultation</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <label for="preferredDate" class="booking-label form-label">Preferred Date</label>
+                            <input type="date" class="form-control booking-input" id="preferredDate">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <label for="preferredTime" class="booking-label form-label">Preferred Time</label>
+                            <input type="time" class="form-control booking-input" id="preferredTime">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-booking-submit">
+                        <i class="fa-regular fa-calendar"></i> Book Appointment
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMO 2 SECTION -->
+        <section id="promo-2" class="section-promo-2 position-relative"
+            style="background-image: url('images/promo-2-bg.png');">
+            <div class="container position-relative z-1">
+                <div class="promo-2-card">
+                    <h2>This Week Only Get 20% Off Treatments</h2>
+                    <p>Take advantage of this limited-time offer and experience premium care for less.</p>
+                    <a href="#" class="btn btn-promo">Book Now →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="section-pricing">
+            <div class="container">
+                <div class="pricing-wrapper">
+
+                    <!-- div trái-->
+                    <div class="pricing-col-left">
+
+                        <div class="pricing-heading">
+                            <span class="pricing-tag">Our Package</span>
+                            <h2>Explore our pricing plans and packages</h2>
                         </div>
 
-                        <div id="feature-text-3" class="feature-text">
-                            <div id="feature-title-3" class="feature-title">100% Quality</div>
-                            <div id="feature-desc-3" class="feature-desc">Massa adipiscing velit vivamus at commodo urna
-                                erat auctor quisque 11</div>
+                        <div class="pricing-desc">
+                            <p>Scelerisque rutrum elit montes ante conubia adipiscing morbi quis. Integer lacus amet
+                                porta praesent congue felis elit lectus dignissim metus. A tristique dapibus enim vel
+                                dictumst</p>
+                        </div>
+
+                        <ul class="pricing-list">
+                            <li class="pricing-list-item"><span>Personalized Care</span></li>
+                            <li class="pricing-list-item"><span>Expert Guidance</span></li>
+                            <li class="pricing-list-item"><span>Relaxing Experience</span></li>
+                            <li class="pricing-list-item"><span>Continuous Improvement</span></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- div giữa-->
+                    <div class="pricing-col-mid">
+                        <div class="pricing-img-wrap">
+                            <img src="images/img-1-png" alt="">
+
+                            <div class="pricing-seamless">
+                                <div class="pricing-seamless-icon">
+                                    <i class="fa-solid fa-spa"></i>
+                                </div>
+                                <h5 class="pricing-seamless-title">Seamless Service</h5>
+                                <p class="pricing-seamless-desc">Blandit eleifend tellus elit magna habitasse aenean
+                                    ornare dapibus</p>
+                            </div>
+
                         </div>
 
                     </div>
+
+                    <!-- div phải-->
+                    <div class="pricing-col-right">
+                        <div class="pricing-testimonial-top">
+                            <div class="pricing-avatars">
+                                <img src="images/avatar-1.png" alt="">
+                                <img src="images/avatar-2.png" alt="">
+                                <img src="images/avatar-3.png" alt="">
+                                <img src="images/avatar-4.png" alt="">
+                            </div>
+                            <h4 class="pricing-testimonial-title">Excellence trusted by clients worldwide for beauty
+                                care</h4>
+                        </div>
+
+                        <div class="pricing-testimonial-desc">
+                            <p>Dictum mollis laoreet suscipit sit viverra. Letius lectus fringilla aliquam curae morbi
+                                in pretium potenti sit elit. A volutpat phasellus cubilia finibus quam tellus lacinia
+                                rhoncus consectetur posuere.</p>
+                        </div>
+
+                        <div class="pricing-testimonial-btn">
+                            <a href="#" class="btn btn-pricing">Read Testimonial →</a>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -246,6 +995,12 @@
 
     <!-- Main JS -->
     <script src="js/main.js"></script>
+
+    <!--Fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]");
+    </script>
 
 </body>
 
