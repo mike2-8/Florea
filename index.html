@@ -31,34 +31,34 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark navbar-expand-xl">
             <div class="container-fluid px-4">
-                <!-- Logo -->
+
                 <a class="navbar-brand" href="#">
                     <img src="images/logo-white.png" alt="Floréa">
                 </a>
 
-                <!-- Toggle button (mobile) -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <!-- Booking + Toggle -->
+                <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMain">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a href="#" class="btn btn-booking d-xl-none" style="color: #ffffff;">Booking Now!</a>
 
-                <!-- Menu -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
                     <ul class="navbar-nav me-3">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#">About Us</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Our Team</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#">Services</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Pricing Plan</a></li>
                                 <li><a class="dropdown-item" href="#">Booking</a></li>
@@ -68,7 +68,7 @@
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#">Pages</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">FAQ</a></li>
                                 <li><a class="dropdown-item" href="#">Gallery</a></li>
@@ -79,8 +79,8 @@
                         </li>
                     </ul>
 
-                    <!-- Nút Booking -->
-                    <a href="#" class="btn btn-booking" style="color: #ffffff;">Booking Now!</a>
+                    <!-- Booking btn -->
+                    <a href="#" class="btn btn-booking d-none d-xl-flex" style="color: #ffffff;">Booking Now!</a>
                 </div>
 
             </div>
@@ -91,13 +91,13 @@
     <main>
         <!-- HERO -->
         <section id="hero" class="hero" style="background-image: url('images/hero-img-1.png');">
-            <div class="container">
+            <div class="container-fluid px-4">
                 <div class="hero-content">
 
                     <!-- Text bên trái -->
                     <div class="hero-text">
                         <h1>Reveal Your <br> Natural Beauty</h1>
-                        <p>Experience gentle skincare designed to <br> enhance your natural glow with elegance.</p>
+                        <p>Experience gentle skincare designed to enhance your natural glow with elegance.</p>
                         <a href="#" class="btn btn-hero">Discover More →</a>
                     </div>
 
@@ -863,7 +863,7 @@
                         </div>
                         <div class="col-12 col-lg-4">
                             <label for="phoneNumber" class="booking-label form-label">Phone Number</label>
-                            <input type="tel" class="form-control booking-input" id="phoneNumber"
+                            <input type="tel" class="form-control booking-input" maxlength="10" minlength="10" id="phoneNumber"
                                 placeholder="Phone Number">
                         </div>
                     </div>
@@ -979,6 +979,280 @@
                             <a href="#" class="btn btn-pricing">Read Testimonial →</a>
                         </div>
 
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKAGE SECTION -->
+        <section id="package" class="section-package">
+
+            <!-- Wave -->
+            <div class="elementor-shape" aria-hidden="true" data-negative="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+                </svg>
+            </div>
+
+            <!-- Heading -->
+            <div class="container">
+                <div class="pkg-header">
+                    <div class="pkg-heading">
+                        <span class="pkg-tag">Choose Package</span>
+                        <h2>Explore our pricing plans and packages</h2>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="row g-5">
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-lg-6">
+                        <div class="pkg-card">
+                            <img src="images/pkg-1.png" alt="Basic Care">
+                            <div class="pkg-card-info">
+                                <div class="pkg-card-title">
+                                    <h5>Basic Care</h5>
+                                    <p>Soft care for smooth bright skin</p>
+                                </div>
+                                <div class="pkg-card-price">
+                                    <span class="pkg-amount">$19</span>
+                                    <span class="pkg-unit">/ treatment</span>
+                                </div>
+                                <div class="pkg-card-features-label">
+                                    <em>Features:</em>
+                                </div>
+                                <div class="pkg-card-features-list">
+                                    <ul>
+                                        <li>Basic skin consultation</li>
+                                        <li>Gentle facial cleansing</li>
+                                        <li>Light hydration treatment</li>
+                                        <li>Skincare routine guidance</li>
+                                    </ul>
+                                </div>
+                                <div class="pkg-card-btn">
+                                    <a href="#" class="btn btn-pkg">Choose Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-lg-6">
+                        <div class="pkg-card">
+                            <img src="images/pkg-2.png" alt="Essential Glow">
+                            <div class="pkg-card-info">
+                                <div class="pkg-card-title">
+                                    <h5>Essential Glow</h5>
+                                    <p>Fresh glow with clean smooth skin</p>
+                                </div>
+                                <div class="pkg-card-price">
+                                    <span class="pkg-amount">$45</span>
+                                    <span class="pkg-unit">/ treatment</span>
+                                </div>
+                                <div class="pkg-card-features-label">
+                                    <em>Features:</em>
+                                </div>
+                                <div class="pkg-card-features-list">
+                                    <ul>
+                                        <li>Personalized skin analysis</li>
+                                        <li>Deep cleansing facial</li>
+                                        <li>Hydrating mask treatment</li>
+                                        <li>Product recommendations</li>
+                                    </ul>
+                                </div>
+                                <div class="pkg-card-btn">
+                                    <a href="#" class="btn btn-pkg">Choose Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-lg-6">
+                        <div class="pkg-card">
+                            <img src="images/pkg-3.png" alt="Premium Radiance">
+                            <div class="pkg-card-info">
+                                <div class="pkg-card-title">
+                                    <h5>Premium Radiance</h5>
+                                    <p>Clear tone with firm smooth skin</p>
+                                </div>
+                                <div class="pkg-card-price">
+                                    <span class="pkg-amount">$75</span>
+                                    <span class="pkg-unit">/ treatment</span>
+                                </div>
+                                <div class="pkg-card-features-label">
+                                    <em>Features:</em>
+                                </div>
+                                <div class="pkg-card-features-list">
+                                    <ul>
+                                        <li>Advanced skin analysis</li>
+                                        <li>Exfoliation and rejuvenation</li>
+                                        <li>Custom skincare application</li>
+                                        <li>Targeted skin solution</li>
+                                    </ul>
+                                </div>
+                                <div class="pkg-card-btn">
+                                    <a href="#" class="btn btn-pkg">Choose Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-12 col-lg-6">
+                        <div class="pkg-card">
+                            <img src="images/pkg-4.png" alt="Luxury Treatment">
+                            <div class="pkg-card-info">
+                                <div class="pkg-card-title">
+                                    <h5>Luxury Treatment</h5>
+                                    <p>Pure glow with soft smooth skin</p>
+                                </div>
+                                <div class="pkg-card-price">
+                                    <span class="pkg-amount">$120</span>
+                                    <span class="pkg-unit">/ treatment</span>
+                                </div>
+                                <div class="pkg-card-features-label">
+                                    <em>Features:</em>
+                                </div>
+                                <div class="pkg-card-features-list">
+                                    <ul>
+                                        <li>Full skin assessment</li>
+                                        <li>Premium facial treatment</li>
+                                        <li>Personalized skincare program</li>
+                                        <li>One-on-one expert consultation</li>
+                                    </ul>
+                                </div>
+                                <div class="pkg-card-btn">
+                                    <a href="#" class="btn btn-pkg">Choose Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIAL SECTION -->
+        <section id="testimonial" class="section-testimonial">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- CỘT TRÁI -->
+                    <div class="col-12 col-lg-6">
+                        <div class="testimonial-left position-relative">
+
+                            <!-- Ảnh -->
+                            <div class="testimonial-img">
+                                <img src="images/testimonial.png" alt="Clients">
+                            </div>
+
+                            <!-- Badge Excellent Point -->
+                            <div class="testimonial-badge">
+                                <!-- Phần content trên -->
+                                <div class="testimonial-badge-content">
+                                    <span class="testimonial-badge-tag">Excellent Point</span>
+                                    <div class="testimonial-badge-score">4.7</div>
+                                    <div class="testimonial-badge-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="testimonial-badge-label">Client Feedback</div>
+                                </div>
+                                <!-- Phần bottom -->
+                                <div class="testimonial-badge-bottom">TOP COMPANY</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- CỘT PHẢI -->
+                    <div class="col-12 col-lg-6">
+                        <div class="testimonial-right">
+
+                            <div class="testimonial-heading">
+                                <span class="testimonial-tag">Testimonial</span>
+                                <h2>Client Feedback & Reviews</h2>
+                            </div>
+
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <!-- Carousel -->
+                            <div class="swiper testimonial-swiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slide">
+                                            <div class="testimonial-content">
+                                                <div class="testimonial-text">
+                                                    <p>The service feels gentle, calm, and professional.
+                                                        My skin looks brighter, healthier, and refreshed.</p>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <img src="images/avt-testi-1.png" alt="Sarah Johnson">
+                                                <div class="testimonial-author-info">
+                                                    <span class="testimonial-author-name">Sarah Johnson</span>
+                                                    <span class="testimonial-author-location">Jakarta</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slide">
+                                            <div class="testimonial-content">
+                                                <div class="testimonial-text">
+                                                    <p>My face feels hydrated, soft, and very smooth.
+                                                        The glow looks natural, fresh, and beautifully radiant.</p>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <img src="images/avt-testi-2.png" alt="Laura Greene">
+                                                <div class="testimonial-author-info">
+                                                    <span class="testimonial-author-name">Laura Greene</span>
+                                                    <span class="testimonial-author-location">Jakarta</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-slide">
+                                            <div class="testimonial-content">
+                                                <div class="testimonial-text">
+                                                    <p>I noticed smoother texture and clearer skin instantly.
+                                                        The results feel natural, balanced, and long lasting.</p>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <img src="images/avt-testi-3.png" alt="David Thompson">
+                                                <div class="testimonial-author-info">
+                                                    <span class="testimonial-author-name">David Thompson</span>
+                                                    <span class="testimonial-author-location">Bandung</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>

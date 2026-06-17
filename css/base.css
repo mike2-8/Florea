@@ -14,6 +14,7 @@
     --font-size-base: 18px;
     --h1-size: 56px;
     --h2-size: 42px;
+    --h3-size: 30px;
 
     /* FONT WEIGHT */
     --fw-light: 300;
@@ -24,6 +25,8 @@
 }
 
 body {
+    overflow-x: hidden;
+
     font-family: var(--font-main);
     font-size: 14px;
     color: #888;
