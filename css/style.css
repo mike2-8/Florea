@@ -333,7 +333,7 @@
 
 /* -----------------------------------ABOUT ------------------------------------ */
 .section-about {
-    padding: 100px 0;
+    padding: 100px 0 30px;
     background: var(--white);
     overflow: hidden;
 }
