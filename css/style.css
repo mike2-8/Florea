@@ -345,8 +345,7 @@
 /* ── CỘT TRÁI ── */
 .about-col-left {
     position: relative;
-    flex: 0 0 500px;
-    width: 500px;
+    width: 100%;
 }
 
 .about-img {
@@ -514,7 +513,6 @@
 }
 
 .btn-play i {
-    font-size: 14px;
     color: var(--white);
     margin-left: 2px;
 }
@@ -525,14 +523,47 @@
 
 .play-label {
     font-family: var(--font-main);
-    font-size: 14px;
-    color: #888;
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .section-about .row {
+        --bs-gutter-x: 24px;
+    }
+
+    .about-badge {
+        right: 0;
+    }
+
+    .about-leaf {
+        left: -20px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0px;
+    }
+
+    .about-stats .stats-number {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-heading h2 {
+        font-size: var(--h3-size);
+    }
+
+    .about-stats .stats-title {
+        font-size: 20px;
+    }
 }
 
 /* ======================== FEATURES ======================== */
 .features {
-    padding: 60px 0;
+    padding: 0 0 40px;
     background: var(--white);
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -558,7 +589,7 @@
     width: 70px;
     height: 70px;
     background: #f0f5f1;
-    border-radius: 12px;
+    border-radius: 20px 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -580,22 +611,53 @@
 .feature-title {
     font-family: var(--font-main);
     font-size: var(--font-size-base);
-    font-weight: 500;
+    font-weight: var(--fw-medium);
     color: var(--primary-color);
 }
 
 .feature-desc {
     font-family: var(--font-main);
     font-size: var(--font-size-base);
-    color: #888;
-    line-height: 1.7;
+    line-height: 1.;
 }
 
+@media (max-width: 992px) {
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding-top: 0;
+    }
+
+    .features-wrapper {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 24px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+    }
+}
 
 /* ============================== BRANDS =============================== */
 .section-brands {
     padding: 80px 0;
-    background: #e8ede9;
+    background: var(--primary-soft);
     overflow: hidden;
 }
 
@@ -635,16 +697,24 @@
     filter: grayscale(0%) opacity(1);
 }
 
+@media (max-width: 768px) {
+    .section-brands {
+        padding: 20px 0;
+    }
+}
+
 /* ======================== VALUES ======================== */
 .section-values {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     min-height: 100vh;
     position: relative;
     display: flex;
     align-items: flex-end;
-    padding-top: 50px;
+    padding-top: 80px;
+
     overflow: hidden;
 }
 
@@ -745,10 +815,46 @@
     margin: 0;
 }
 
+@media (min-width: 992px) {
+    .section-values .col-lg-6 {
+        flex: 0 0 auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .values-card {
+        width: 100%;
+    }
+
+    .values-heading h2 {
+        font-size: var(--h3-size);
+    }
+
+    .section-values .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .values-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 32px 24px;
+        gap: 16px;
+    }
+
+    .section-values .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
 /* ============================= SERVICES ================================ */
 
 .section-services {
-    padding: 100px 0;
+    padding: 100px 0 0;
     background: var(--white);
     overflow: hidden;
 }
@@ -825,6 +931,25 @@
     object-fit: cover;
 }
 
+@media (max-width: 992px) {
+    .section-services .row {
+        flex-direction: column-reverse;
+    }
+
+    .services-content {
+        max-width: 100%;
+    }
+
+    .section-services .container {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .services-heading h2 {
+        font-size: var(--h3-size);
+    }
+}
+
 /* ======================== TREATMENTS ======================== */
 .section-treatments {
     background: var(--primary-light);
@@ -869,6 +994,7 @@
 
 /* ── CARD ── */
 .treatment-card {
+    height: 100%;
     background: var(--white);
     border-radius: 20px;
     overflow: hidden;
@@ -911,6 +1037,7 @@
 }
 
 .treatment-card-body {
+    flex: 1;
     padding: 52px 24px 28px;
     display: flex;
     flex-direction: column;
@@ -922,6 +1049,7 @@
     font-size: 24px;
     font-weight: var(--fw-medium);
     color: var(--primary-color);
+    margin-top: auto;
 }
 
 .treatment-card-desc {
@@ -933,6 +1061,7 @@
 .treatment-card-divider {
     border-color: rgba(0, 0, 0, 0.1);
     margin: 4px 0;
+    margin-top: auto;
 }
 
 .treatment-card-meta {
@@ -975,6 +1104,28 @@
 .treatment-btn:hover {
     background: var(--primary-light);
     color: var(--white);
+}
+
+@media (max-width: 992px) {
+    .treatment-card-img>img {
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-treatments .container {
+        max-width: 100%;
+    }
+
+    .treatments-heading h2 {
+        font-size: var(--h3-size);
+    }
+}
+
+@media (max-width: 768px) {
+    .treatment-card-img>img {
+        aspect-ratio: 16/9;
+    }
 }
 
 /* ============================== PROMO ============================= */
@@ -1047,6 +1198,19 @@
 .btn-promo:hover {
     background: var(--primary-light);
     color: var(--white);
+}
+
+@media (max-width: 576px) {
+
+    .promo-card,
+    .promo-2-card {
+        max-width: 100%;
+        border-radius: 20px 0 20px 0;
+    }
+
+    .steps-leaf {
+        display: none;
+    }
 }
 
 /* ======================== WHY US ======================== */
@@ -1444,6 +1608,7 @@
     min-height: 60vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .section-promo-2::before {
@@ -2082,6 +2247,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .testimonial-author img {
