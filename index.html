@@ -714,7 +714,7 @@
                 <div class="row align-items-center g-5">
 
                     <!-- CỘT TRÁI -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
 
                         <div class="steps-content">
                             <div class="steps-heading">
@@ -734,7 +734,7 @@
                     </div>
 
                     <!-- CỘT PHẢI -->
-                    <div class="col-12 col-lg-6 position-relative">
+                    <div class="col-12 col-md-6 position-relative">
 
                         <div class="steps-leaf">
                             <img src="images/leaves.png" alt="">
@@ -827,14 +827,14 @@
             <div class="container">
                 <div class="row g-5 mb-5">
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="booking-heading">
                             <span class="booking-tag">Book an Appointmet</span>
                             <h2>Book your beauty treatment with ease and comfort today</h2>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="booking-intro">
                             <p>Sociosqu penatibus senectus lacinia blandit dictum consectetuer risus bibendum maximus
                                 dapibus. Tortor class fames rutrum ac vestibulum congue. Massa convallis montes in sed
@@ -848,31 +848,34 @@
 
                 </div>
 
-                <div class="booking-form">
+                <form class="booking-form">
 
                     <!-- Hàng 1 -->
                     <div class="row g-3 mb-3">
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="fullName" class="booking-label form-label">Full Name</label>
-                            <input type="text" class="form-control booking-input" id="fullName" placeholder="Full Name">
+                            <input type="text" class="form-control booking-input" id="fullName" placeholder="Full Name"
+                                required>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="emailAddress" class="booking-label form-label">Email Address</label>
                             <input type="email" class="form-control booking-input" id="emailAddress"
-                                placeholder="Email Address">
+                                placeholder="Email Address" required>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="phoneNumber" class="booking-label form-label">Phone Number</label>
-                            <input type="tel" class="form-control booking-input" maxlength="10" minlength="10" id="phoneNumber"
-                                placeholder="Phone Number">
+                            <input type="tel" class="form-control booking-input" id="phoneNumber"
+                                placeholder="Phone Number" maxlength="10" minlength="10" pattern="[0-9]{10}"
+                                inputmode="numeric" required title="Vui lòng nhập đúng 10 chữ số">
                         </div>
                     </div>
 
                     <!-- Hàng 2 -->
                     <div class="row g-3 mb-4">
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="selectService" class="booking-label form-label">Select Service</label>
-                            <select class="form-select booking-input" id="selectService">
+                            <select class="form-select booking-input" id="selectService" required>
+                                <option value="">-- Chọn dịch vụ --</option>
                                 <option>Deep Cleansing Facial</option>
                                 <option>Hydrating Facial Treatment</option>
                                 <option>Brightening Facial Care</option>
@@ -881,20 +884,21 @@
                                 <option>Skin Analysis Consultation</option>
                             </select>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="preferredDate" class="booking-label form-label">Preferred Date</label>
-                            <input type="date" class="form-control booking-input" id="preferredDate">
+                            <input type="date" class="form-control booking-input" id="preferredDate" required>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-md-4">
                             <label for="preferredTime" class="booking-label form-label">Preferred Time</label>
-                            <input type="time" class="form-control booking-input" id="preferredTime">
+                            <input type="time" class="form-control booking-input" id="preferredTime" required>
                         </div>
                     </div>
 
-                    <button class="btn btn-booking-submit">
+                    <button type="submit" class="btn btn-booking-submit">
                         <i class="fa-regular fa-calendar"></i> Book Appointment
                     </button>
-                </div>
+
+                </form>
             </div>
         </section>
 
@@ -1144,7 +1148,7 @@ c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
                 <div class="row align-items-center g-5">
 
                     <!-- CỘT TRÁI -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="testimonial-left position-relative">
 
                             <!-- Ảnh -->
@@ -1175,7 +1179,7 @@ c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
                     </div>
 
                     <!-- CỘT PHẢI -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="testimonial-right">
 
                             <div class="testimonial-heading">
@@ -1258,6 +1262,214 @@ c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
                 </div>
             </div>
         </section>
+
+        <!----- CTA SECTION ----->
+        <section id="cta" class="section-cta">
+            <div class="container">
+                <div class="cta-bg" style="background-image: url('images/cta.png');">
+                    <div class="cta-content">
+                        <h2>Get your free personalized beauty consultation today</h2>
+                        <p>Cursus nam integer phasellus luctus dis pellentesque aenean curabitur mattis quis venenatis
+                        </p>
+                        <a href="#" class="btn btn-cta">Book Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----- BLOG SECTION ----->
+        <section id="blog" class="section-blog">
+            <div class="container">
+                <div class="blog-header">
+                    <h2>Free Article & Insight</h2>
+                    <a href="#" class="btn btn-read">READ ARTICLE <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="images/blog1.png" alt="Blog 1">
+                            </div>
+                            <div class="blog-card-body">
+                                <h3><a href="#">Benefits Of Using Gentle Skincare For Sensitive Skin</a></h3>
+                                <div class="blog-meta">
+                                    <span>March 29, 2026</span>
+                                    <span class="dot">.</span>
+                                    <span>No Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="images/value-bg.png" alt="Blog 2">
+                            </div>
+                            <div class="blog-card-body">
+                                <h3><a href="#">Night Routine Secrets For Youthful Radiant Skin</a></h3>
+                                <div class="blog-meta">
+                                    <span>March 29, 2026</span>
+                                    <span class="dot">.</span>
+                                    <span>No Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="images/cta.png" alt="Blog 3">
+                            </div>
+                            <div class="blog-card-body">
+                                <h3><a href="#">Morning Skincare Routine For Fresh Glowing Face</a></h3>
+                                <div class="blog-meta">
+                                    <span>March 29, 2026</span>
+                                    <span class="dot">.</span>
+                                    <span>No Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="images/testimonial.png" alt="Blog 4">
+                            </div>
+                            <div class="blog-card-body">
+                                <h3><a href="#">Top Ingredients That Transform Your Skin Naturally</a></h3>
+                                <div class="blog-meta">
+                                    <span>March 29, 2026</span>
+                                    <span class="dot">.</span>
+                                    <span>No Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----- STATS SECTION ----->
+        <section id="stats" class="section-stats" style="background-image: url('images/stats.png');">
+            <div class="stats-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="25">0</span>K+</h3>
+                            <p>Community Members</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="5">0</span>K+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="47">0</span>+</h3>
+                            <p>Certified Experts</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="25">0</span>+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----- FOOTER ----->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Col 1: Brand -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-brand">
+                                <a href="#" class="footer-logo">
+                                    <img src="images/logo.png" alt="Floréa">
+                                </a>
+                                <p>Floréa brings natural beauty and timeless elegance into your daily skincare ritual.
+                                </p>
+                                <a href="#" class="btn btn-appointment">
+                                    <i class="fas fa-calendar-alt"></i> Book Appointment
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Col 2: Get in Touch -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h5>Get in Touch</h5>
+                                <ul class="footer-contact">
+                                    <li>Jln Cempaka Wangi No 22<br>Jakarta - Indonesia</li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:support@domain.tld">support@domain.tld</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <a href="tel:8884000234">(888) 4000-2345</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Col 3: Opening Hours -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h5>Opening Hours</h5>
+                                <ul class="footer-hours">
+                                    <li>
+                                        <span>Monday — Saturday</span>
+                                        <span>9:00 AM — 6:00 PM</span>
+                                    </li>
+                                    <li>
+                                        <span>Sunday</span>
+                                        <span>Closed</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Col 4: Newsletter -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-newsletter">
+                                <h5>Stay radiant with Floréa updates and daily beauty inspiration</h5>
+                                <div class="newsletter-form">
+                                    <div class="newsletter-inputs">
+                                        <input type="text" placeholder="Name">
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                    <button class="btn btn-subscribe">
+                                        <i class="fas fa-envelope"></i> Explore & Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-inner">
+                        <p>Copyright © 2026 Floréa, All rights reserved. Powered by MoxCreative.</p>
+                        <div class="footer-socials">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
 
@@ -1267,14 +1479,12 @@ c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Main JS -->
-    <script src="js/main.js"></script>
 
     <!--Fancybox-->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-        Fancybox.bind("[data-fancybox]");
-    </script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 
 </body>
 
