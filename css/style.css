@@ -2909,7 +2909,7 @@
     flex: 1;
     padding: 10px 14px;
     border: 1px solid #ddd;
-    border-radius: 20px 0 20px 0;
+    border-radius: 10px;
     background: var(--white);
     outline: none;
     width: 100%;
@@ -2974,6 +2974,16 @@
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .footer-main .container {
+        max-width: 100%;
+    }
+
+    .footer-brand {
+        margin-top: -15px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-bottom-inner {
         flex-direction: column;
@@ -2982,5 +2992,9 @@
 
     .newsletter-inputs {
         flex-direction: column;
+    }
+
+    .footer-bottom-inner {
+        flex-direction: column-reverse;
     }
 }
