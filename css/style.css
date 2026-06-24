@@ -1,14 +1,33 @@
 /* ======================== NAVBAR ======================== */
 .navbar {
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
     padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
 }
+
+.navbar.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: none;
+}
+
+.navbar.navbar-scrolled .nav-link {
+    color: var(--primary-color);
+}
+
+.navbar.navbar-scrolled .nav-link:hover,
+.navbar.navbar-scrolled .nav-link.active {
+    color: var(--secondary-color);
+}
+
 
 .navbar-toggler {
     border: none;
@@ -27,6 +46,11 @@
     font-size: 24px;
     font-weight: var(--fw-semibold);
     color: var(--white);
+}
+
+.navbar-brand img {
+    height: 36px;
+    width: auto;
 }
 
 .navbar .nav-link {
@@ -324,7 +348,22 @@
 
     .hero-card {
         width: 100%;
+        padding: 16px;
     }
+
+        .hero-card h6 {
+        font-size: 15px;
+    }
+
+    .hero-card p {
+        font-size: 13px;
+    }
+
+    .hero-card-icon {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
 
     .hero-text h1 {
         font-size: var(--h3-size);
@@ -559,6 +598,10 @@
 
     .about-stats .stats-title {
         font-size: 20px;
+    }
+
+    .btn-outline-about {
+        padding: 2px 15px;
     }
 }
 
@@ -1631,6 +1674,24 @@
     color: var(--white);
 }
 
+@media (max-width: 576px) {
+    .booking-heading h2 {
+        font-size: var(--h3-size);
+    }
+
+    .booking-intro-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-booking-primary,
+    .btn-booking-outline {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 /* ── FORM ── */
 .booking-form .form-control,
 .booking-form .form-select {
@@ -2294,6 +2355,22 @@
     }
 }
 
+@media (max-width: 576px) {
+    .pkg-card-info {
+        max-width: 280px;
+        padding: 20px 16px;
+        gap: 12px;
+    }
+
+    .pkg-amount {
+        font-size: 40px;
+    }
+
+    .pkg-card-title h5 {
+        font-size: 20px;
+    }
+}
+
 /* ======================== TESTIMONIAL ======================== */
 .section-testimonial {
     padding: 100px 0;
@@ -2600,6 +2677,26 @@
     color: var(--white);
 }
 
+@media (max-width: 576px) {
+    .cta-bg {
+        min-height: 420px;
+    }
+
+    .cta-content {
+        padding: 28px 24px;
+        gap: 14px;
+    }
+
+    .cta-content h2 {
+        font-size: var(--h3-size);
+    }
+
+    .btn-cta {
+        margin-top: 20px;
+        padding: 10px 11px;
+    }
+}
+
 
 /* ============================== BLOG ============================= */
 
@@ -2720,6 +2817,16 @@
 @media (max-width: 768px) {
     .blog-header {
         align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-header {
+        text-align: center;
+    }
+
+    .btn-read {
+        padding: 8px 10px;
     }
 }
 
@@ -2991,7 +3098,7 @@
     }
 
     .newsletter-inputs {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .footer-bottom-inner {

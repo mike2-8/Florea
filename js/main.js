@@ -73,3 +73,17 @@ if (statsSection) {
 
     observer.observe(statsSection);
 }
+
+// 6. Navbar scroll
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const logo = document.querySelector('.navbar-brand img');
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+        logo.src = 'images/logo.png';
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+        logo.src = 'images/logo-white.png';
+    }
+});
