@@ -87,3 +87,71 @@ window.addEventListener('scroll', () => {
         logo.src = 'images/logo-white.png';
     }
 });
+
+
+// 7. ---- LEAFLET MAP ----
+const mapEl = document.getElementById('map');
+if (mapEl) {
+    const map = L.map('map', {
+        scrollWheelZoom: false,
+        maxZoom: 19
+    }).setView([10.0480652, 105.7600721], 16);
+
+    mapEl.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) {
+            e.preventDefault();
+            map.scrollWheelZoom.enable();
+        } else {
+            map.scrollWheelZoom.disable();
+            mapEl.classList.add('show-scroll-hint');
+            clearTimeout(mapEl._hintTimeout);
+            mapEl._hintTimeout = setTimeout(() => {
+                mapEl.classList.remove('show-scroll-hint');
+            }, 1500);
+        }
+    }, { passive: false });
+
+    const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 19
+    });
+
+    const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri',
+        maxZoom: 19
+    });
+
+    streetLayer.addTo(map);
+
+    L.control.layers({
+        'Street': streetLayer,
+        'Satellite': satelliteLayer
+    }).addTo(map);
+
+    const marker = L.marker([10.0480652, 105.7600721]).addTo(map);
+
+    const infoControl = L.control({ position: 'topleft' });
+
+    infoControl.onAdd = function () {
+        const div = L.DomUtil.create('div', 'map-info-card');
+        div.innerHTML = `
+            <div class="map-popup-header">
+                <div class="map-popup-info">
+                    <h4>202 Đường Nguyễn Đệ</h4>
+                    <p>202 Đường Nguyễn Đệ,<br>Bình Thủy, Cần Thơ</p>
+                </div>
+                <div class="map-popup-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=10.0480652,105.7600721" target="_blank" title="Xem trên Google Maps">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=10.0480652,105.7600721" target="_blank" title="Chỉ đường">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+        return div;
+    };
+
+    infoControl.addTo(map);
+}
