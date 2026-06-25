@@ -75,15 +75,15 @@ if (statsSection) {
 }
 
 // 6. Navbar scroll
-const navbar = document.querySelector('.navbar');
+const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
     const logo = document.querySelector('.navbar-brand img');
     if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled');
+        header.classList.add('navbar-scrolled');
         logo.src = 'images/logo.png';
     } else {
-        navbar.classList.remove('navbar-scrolled');
+        header.classList.remove('navbar-scrolled');
         logo.src = 'images/logo-white.png';
     }
 });
@@ -155,3 +155,42 @@ if (mapEl) {
 
     infoControl.addTo(map);
 }
+
+// 8. Swiper thumpnail
+
+        var swiperThumb = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        var swiperMain = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiperThumb,
+            },
+        });
+
+        Fancybox.bind('[data-fancybox="product-gallery"]', {});
+
+// 9. Swiper slide 
+        var swiperRelated = new Swiper(".related-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".related-swiper .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                576: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+            }
+        });
