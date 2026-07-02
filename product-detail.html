@@ -31,10 +31,9 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
-        <div class="container-fluid px-4">
-            <nav class="navbar navbar-dark navbar-expand-xl">
+        <nav class="navbar navbar-dark navbar-expand-xl">
+            <div class="container-fluid px-4">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo-white.png" alt="Floréa">
                 </a>
@@ -71,14 +70,14 @@
                                 <li><a class="dropdown-item" href="#">Gallery</a></li>
                                 <li><a class="dropdown-item" href="#">Blog Archive</a></li>
                                 <li><a class="dropdown-item" href="#">Single Post</a></li>
-                                <li><a class="dropdown-item" href="#">Error 404</a></li>
+                                <li><a class="dropdown-item" href="error.html">Error 404</a></li>
                             </ul>
                         </li>
                     </ul>
                     <a href="#" class="btn btn-booking d-none d-xl-flex" style="color: #ffffff;">Booking Now!</a>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -106,7 +105,7 @@
                 <div class="row g-5">
 
                     <!-- CỘT TRÁI: Gallery -->
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="product-gallery">
 
                             <!-- Main Swiper -->
@@ -168,7 +167,7 @@
                     </div>
 
                     <!-- CỘT PHẢI: Thông tin sản phẩm -->
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="product-info">
 
                             <!-- Header info -->
@@ -182,9 +181,17 @@
                             <hr class="product-divider">
 
                             <!-- Price -->
-                            <div class="pkg-card-price">
-                                <span class="pkg-amount">$19</span>
-                                <span class="pkg-unit">/ treatment</span>
+                            <div class="product-price-group">
+                                <div class="pkg-card-price">
+                                    <span class="pkg-amount">$19</span>
+                                    <span class="pkg-unit">/ treatment</span>
+                                </div>
+                                <div class="product-discount-badge">
+                                    <span class="discount-tag">-20% OFF</span>
+                                    <span class="discount-new">$15.20</span>
+                                    <span class="discount-original">Was $19</span>
+                                    <span class="discount-save">You save $3.80</span>
+                                </div>
                             </div>
 
                             <hr class="product-divider">
@@ -318,8 +325,8 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <p class="review-text">"My skin feels incredibly soft after just one week. The rose
-                                    scent is so calming!"</p>
-                                <span class="review-author">— Mike</span>
+                                    scent is so calming! Next time, I will invite my friends come here"</p>
+                                <span class="review-author">— Peruere</span>
                             </div>
                             <div class="review-item">
                                 <div class="review-stars">
@@ -329,7 +336,7 @@
                                 </div>
                                 <p class="review-text">"Finally a treatment that doesn't irritate my sensitive skin.
                                     Absolutely love Floréa."</p>
-                                <span class="review-author">— Mary Ann</span>
+                                <span class="review-author">— Sandrone Guillotin</span>
                             </div>
                             <div class="review-item">
                                 <div class="review-stars">
